@@ -1,0 +1,13 @@
+spring:
+  config:
+    import: "optional:file:/myconfig/application.yaml"
+logging:
+  level:
+    root: ${LOGGING:INFO}
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"

@@ -17,6 +17,24 @@ spec:
       containers:
       - image: application:0.2
         name: application
+        args:
+        - -XX:MaxRAMPercentage=60.0
+        resources:
+          requests:
+            cpu: 500m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
         ports:
         - name: http
           containerPort: 8080
+        - name: metrics
+          containerPort: 8081
+        volumeMounts:
+          - name: myconfig
+            mountPath: /myconfig
+      volumes:
+        - name: myconfig
+          configMap:
+            name: myconfig
