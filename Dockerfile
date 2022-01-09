@@ -6,4 +6,4 @@ COPY . .
 # ビルド
 RUN ["./gradlew", "build"]
 # docker run時にキックするコマンド
-ENTRYPOINT ["java", "-jar", "build/libs/java-for-k8s-0.1.jar"]
+ENTRYPOINT ["java", "-jar", "build/libs/java-for-k8s-0.2.jar"]

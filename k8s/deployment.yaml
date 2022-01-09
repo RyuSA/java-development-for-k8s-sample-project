@@ -15,7 +15,7 @@ spec:
         app: application
     spec:
       containers:
-      - image: application:0.1
+      - image: application:0.2
         name: application
         ports:
         - name: http
