@@ -27,3 +27,7 @@ test {
 springBoot {
 	buildInfo()
 }
+
+bootBuildImage {
+  imageName = "application:${project.version}"
+}
